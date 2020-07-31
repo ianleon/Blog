@@ -64,6 +64,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+    
         Text("Hello, world!").padding()
     }
 }
@@ -87,6 +88,7 @@ struct ContentView: View {
     var session = AVCaptureSession()
 
     var body: some View {
+    
         Text("Hello, world!").padding()
     }
 }
@@ -153,6 +155,7 @@ class LegacyViewfinder: UIView
 
     // We need to set a type for our layer
     override class var layerClass: AnyClass {
+    
         AVCaptureVideoPreviewLayer.self
     }
 }
@@ -168,6 +171,7 @@ We implement `makeUIView` which will create an instance of our `‌LegacyViewfin
 ```swift
 struct Viewfinder:UIViewRepresentable {
     func makeUIView(context: Context) -> UIView {
+    
         LegacyViewfinder()
     }
     
@@ -191,6 +195,7 @@ struct Viewfinder:UIViewRepresentable {
     var session: AVCaptureSession
     
     func makeUIView(context: Context) -> UIView {
+    
         LegacyViewfinder()
     }
     
@@ -212,6 +217,7 @@ struct Viewfinder:UIViewRepresentable {
     var session: AVCaptureSession
     
     func makeUIView(context: Context) -> UIView {
+    
         let legacyView = LegacyViewfinder()
         PREVIEW : if let previewLayer = legacyView.layer as? AVCaptureVideoPreviewLayer {
             previewLayer.session = session
@@ -233,13 +239,13 @@ Finally, we update the body of our `ContentView` to show our `Viewfinder` passin
 
 ```swift
 struct ContentView: View {
+
     var session = AVCaptureSession()
     
     var body: some View {
         
         // START Setting configuration properties
         session.beginConfiguration()
-
         
         // Get the capture device
         DEVICE : if let frontCameraDevice = AVCaptureDevice.default(
