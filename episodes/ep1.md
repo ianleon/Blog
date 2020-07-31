@@ -33,7 +33,7 @@ Find the following existing nodes and make these changes:
 
 **Disable multiple scenes:**
 
-```
+```xml
 <key>UIApplicationSceneManifest</key>
 <dict>
 	<key>UIApplicationSupportsMultipleScenes</key>
@@ -43,7 +43,7 @@ Find the following existing nodes and make these changes:
 
 **Disable Rotation**
 
-```
+```xml
 <key>UISupportedInterfaceOrientations</key>
 <array>
 	<string>UIInterfaceOrientationPortrait</string>
@@ -79,7 +79,7 @@ Our first step is to add a capture session.
 
 This is the object the system gives us as a central point to coordinate everything we will be doing with the camera.
 
-```
+```swift
 import SwiftUI
 import AVKit
 
@@ -185,7 +185,7 @@ The next step will be connecting our AVSession to our viewfinder.
 First, we need to give our SwiftUI ViewFinder a way to have a  reference to this session. We do this by adding a property to our `Viewfinder`:
 
 
-```
+```swift
 struct Viewfinder:UIViewRepresentable {
         
     var session: AVCaptureSession
@@ -207,7 +207,6 @@ Now we need to connect our session to the `AVCaptureVideoPreviewLayer` layer ins
 
 
 ```swift 
-
 struct Viewfinder:UIViewRepresentable {
     
     var session: AVCaptureSession
@@ -232,7 +231,7 @@ struct Viewfinder:UIViewRepresentable {
 
 Finally, we update the body of our `ContentView` to show our `Viewfinder` passing in the reference to the session.
 
-```
+```swift
 struct ContentView: View {
     var session = AVCaptureSession()
     
