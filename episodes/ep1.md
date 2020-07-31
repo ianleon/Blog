@@ -1,6 +1,6 @@
 # Episode 1
 
-We will be starting by making an empty app SwiftUI app and adding a viewfinder.
+We will be starting by making an empty SwiftUI app and adding a viewfinder.
 
 I will be using Xcode 12 beta 3 on BigSur Beta 3
 
