@@ -21,7 +21,7 @@ I find that the easiest way to add this is to:
 - Choose `Open As > Source Code`
 - Paste the following code as the first item under the topmost `<dict>` node
 
-```plist
+```xml
 <key>NSCameraUsageDescription</key>
 <string>$(EXECUTABLE_NAME) uses the camera to take pictures</string>
 ```
