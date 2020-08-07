@@ -1,4 +1,4 @@
-# Episode 1
+# Making a camera app in SwiftUI - Episode 1
 
 We will be starting by making an empty SwiftUI app and adding a viewfinder.
 
