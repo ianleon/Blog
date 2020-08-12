@@ -272,7 +272,7 @@ let framesDelegate = FramesDelegate(
 // ...
 ```
 
-Here we are creating a metal device, using it to create a `LegacyMetalViewfinder`, and using that to now create our `FramesDelegate`
+Here we are creating a metal device, using it to create a `LegacyMetalViewfinder`, and using that to now create our `FramesDelegate`.
 
 Finally, we can update what we are returning from the body of `ContentView` to our shiny new SwiftUI + Metal Viewfinder.
 
