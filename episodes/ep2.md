@@ -152,6 +152,8 @@ struct MetalViewfinder: UIViewRepresentable {
 
 This object will receive an instance of `LegacyMetalViewfinder`. It will set it up with a clear background, and connect it to a `LegacyMetalViewFinderDelegate`.
 
+## Filter Frames
+
 Now for the exciting part, we will be updating the `FrameDelegate`. This is the object that is receiving frames from the camera.
 
 First, we will add a property for the `LegacyMetalViewfinder` and implement an init to store and configure it for receiving frames.
@@ -253,7 +255,7 @@ metalViewfinder.image = scaledImage
 
 Notice that we apply the filters before the transforms. We do this because we want the results of the filter to be consistent with the data we are getting from the sensor. For example, the image we get on an `11 Pro` should be the same as an `11 Pro Max` regardless of the difference in display size.
 
-# Update the UI
+## Update the UI
 
 Go to the `ContentView` update the `framesDelegate` property
 
@@ -282,9 +284,9 @@ return MetalViewfinder(
 )
 ```
 
-Here we have created the MetalViewfinder and passed in the same metal viewfinder from the `framesDelegate`
+Here we have created our `MetalViewfinder` representable and passed in the same `metalViewfinder` from the `framesDelegate`
 
-Now you can run the app and see yourself as a Minecraft character...
+Now you can run the app and see yourself, as a Minecraft character...
 
 Except there is one minor issue. The frames we are getting from the camera are rotated. We can fix this by updating the connections on the session. Add the following right before the call to `commitConfiguration`
 
