@@ -63,7 +63,7 @@ You will see `captureOutput(_:didOutput:from:)` calls if you run the app now.
 
 ## Handle Frames
 
-We will begin by importing modules. We will need MetalKit, CoreImage, and CoreImage builting filters
+We will begin by importing modules. We will need MetalKit, CoreImage, and CoreImage built-in filters
 
 Add the following to the top of the file.
 
