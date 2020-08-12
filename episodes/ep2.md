@@ -257,7 +257,7 @@ Notice that we apply the filters before the transforms. We do this because we wa
 
 ## Update the UI
 
-Go to the `ContentView` update the `framesDelegate` property
+Go to the `ContentView` and update the `framesDelegate` property
 
 ```swift
 // ...
