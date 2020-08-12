@@ -279,9 +279,7 @@ Finally, we can update what we are returning from the body of `ContentView` to o
 ```swift
 // ...
 
-return MetalViewfinder(
-	legacyViewfinder: framesDelegate.metalViewfinder
-)
+return MetalViewfinder(legacyViewfinder: framesDelegate.metalViewfinder)
 ```
 
 Here we have created our `MetalViewfinder` representable and passed in the same `metalViewfinder` from the `framesDelegate`
