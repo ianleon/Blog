@@ -286,7 +286,7 @@ Here we have created our `MetalViewfinder` representable and passed in the same 
 
 Now you can run the app and see yourself, as a Minecraft character...
 
-Except there is one minor issue. The frames we are getting from the camera are rotated. We can fix this by updating the connections on the session. Add the following right before the call to `commitConfiguration`
+Except there is one minor issue. The frames we are getting from the camera are in the wrong orientation. We can fix this by updating the connections on the session. Add the following right before the call to `commitConfiguration`
 
 
 ```swift
