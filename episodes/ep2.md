@@ -282,7 +282,7 @@ Finally, we can update what we are returning from the body of `ContentView` to o
 return MetalViewfinder(legacyViewfinder: framesDelegate.metalViewfinder)
 ```
 
-Here we have created our `MetalViewfinder` representable and passed in the same `metalViewfinder` from the `framesDelegate`
+Here we have created our `MetalViewfinder` representable and passed in the same `metalViewfinder` from the `framesDelegate`.
 
 Now you can run the app and see yourself, as a Minecraft character...
 
