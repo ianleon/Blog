@@ -205,7 +205,7 @@ let targetRect = AVMakeRect(
 // ...
 ```
 
-The `AVMakeRect` function saves us from writing geometry code to deal with ratios, orientations, and resolutions.
+The `AVMakeRect` function saves us from writing geometry code to deal with ratios, orientations, and resolutions. [Check it out](https://developer.apple.com/documentation/avfoundation/1390116-avmakerect)
 
 All we have to do now is create a couple basic transforms.
 
