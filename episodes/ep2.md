@@ -129,7 +129,7 @@ You can watch
 [Optimize the Core Image pipeline for your video app
 ](https://developer.apple.com/wwdc20/10008). It's a short WWDC session that explains how to get the best performance in this situation and it explains why this view was configured this way. 
 
-Now for the SwiftUI part. Aside from a few differences, This part will be similar to setting up the plain view finder from the previous article.
+Now for the SwiftUI part. Aside from minor differences, This part will be similar to setting up the plain view finder from the previous article.
 
 ```swift
 struct MetalViewfinder: UIViewRepresentable {
