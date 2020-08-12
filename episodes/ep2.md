@@ -229,7 +229,7 @@ let translate = CGAffineTransform(
 
 We create a filter and use it on our `CIImage`, apply the transforms we created, and send it to the viewfinder.
 
-```
+```swift
 // ...
 
 // Apply a filter
