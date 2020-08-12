@@ -292,7 +292,7 @@ Except there is one minor issue. The frames we are getting from the camera are i
 ```swift
 // ...
 
-// Connection configuratoins
+// Connection configurations
 CONNECTION : for connection in session.connections {
     
     // Handle orientation and mirroring properly
