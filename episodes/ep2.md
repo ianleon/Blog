@@ -171,8 +171,6 @@ class FramesDelegate:NSObject,AVCaptureVideoDataOutputSampleBufferDelegate {
 
 Now we can implement `captureOutput(_:didOutput:from:)`. This is where we will be taking the frames we get from the camera, modifying them with Metal optimized `CIFilters`, and sending them off to our metal based viewfinder.
 
-We want to get a `CIImage` from the `sampleBuffer`.
-
 ```swift 
 guard let imageBuffer = sampleBuffer.imageBuffer
 else {
