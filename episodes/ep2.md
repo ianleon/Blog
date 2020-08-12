@@ -154,17 +154,19 @@ This object will receive an instance of `LegacyMetalViewfinder`. It will set it 
 
 Now for the exciting part, we will be updating the `FrameDelegate`. This is the object that is receiving frames from the camera.
 
-First, we will add a property for the `LegacyMetalViewfinder` and create an init to receiving, storing, and configuring it.
+First, we will add a property for the `LegacyMetalViewfinder` and implement an init to store and configure it for receiving frames.
 
 ```swift
-let metalViewfinder: LegacyMetalViewfinder
-
-init(viewfinder: LegacyMetalViewfinder) {
-    metalViewfinder = viewfinder
-    metalViewfinder.framebufferOnly = false
+class FramesDelegate:NSObject,AVCaptureVideoDataOutputSampleBufferDelegate {
+    let metalViewfinder: LegacyMetalViewfinder
     
-    super.init()
-}
+    init(viewfinder: LegacyMetalViewfinder) {
+        metalViewfinder = viewfinder
+        metalViewfinder.framebufferOnly = false
+        
+        super.init()
+    }
+    // ...
 ```
 
 Now we can implement `captureOutput(_:didOutput:from:)`. This is where we will be taking the frames we get from the camera, modifying them with metal optimized CIFilters, and sending them off to our metal based viewfinder.
