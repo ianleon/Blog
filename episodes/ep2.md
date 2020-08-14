@@ -1,4 +1,4 @@
-# Making a camera app in SwiftUI - Episode 2
+# Adding Filters to a SwiftUI camera app - Episode 2
 
 We will be continuing our SwiftUI camera app by implementing filters on the viewfinder.
 
