@@ -2,6 +2,12 @@
 
 We will be continuing our SwiftUI camera app by implementing filters on the viewfinder.
 
+I will be using Xcode 12 beta 4 on Big Sur Beta 4.
+
+If you want to code-along you can use the project from the last episode as a starting point.
+
+[EP 1 Project](https://github.com/ianleon/BlogCam/tree/Ep1)
+
 ## Get Frames
 
 The first thing we need to do is capture the frames we need to filter. We need to create a frame pipeline to enable this.
