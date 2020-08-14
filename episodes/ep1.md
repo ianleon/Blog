@@ -2,7 +2,7 @@
 
 We will be starting by making an empty SwiftUI app and adding a viewfinder.
 
-I will be using Xcode 12 beta 3 on BigSur Beta 3
+I will be using Xcode 12 beta 3 on Big Sur Beta 3
 
 Start a new project in Xcode, choose iOS app, and configure it like this: 
 
