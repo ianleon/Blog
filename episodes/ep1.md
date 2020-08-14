@@ -275,3 +275,5 @@ struct ContentView: View {
 Now you can run the app and see yourself.
 
 [Download Project](https://github.com/ianleon/BlogCam/tree/Ep1)
+
+Continue: [Adding filters to a SwiftUI camera app - Episode 2](https://github.com/ianleon/Blog/blob/master/episodes/ep2.md)
