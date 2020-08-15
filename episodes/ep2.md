@@ -316,3 +316,4 @@ Now the viewfinder is properly oriented in portrait and mirrored like a normal c
 
 [Download Project](https://github.com/ianleon/BlogCam/tree/Ep2)
 
+Continue: [Generics, Protocol Oriented Design, and SwiftUI](https://github.com/ianleon/Blog/blob/master/episodes/ep3.md)

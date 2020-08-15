@@ -18,7 +18,7 @@ Delete `ContentView_Previews` since this type of app doesn't work with previews 
 
 ## Object Oriented Design
 
-As it is, the code that makes the viewfinder work is spread across several types. In hindsight, this was not necessary and doesn't do much for us. For example, the `FramesDelegate` type is tightly coupled with `LegacyMetalViewfinder`. 
+As it is, the code that makes the viewfinder work is spread across several types. In hindsight, this doesn't do much for us. For example, the `FramesDelegate` type is tightly coupled with `LegacyMetalViewfinder`. 
 
 The way I see it there are two ways to go. The first would be to make these objects interact with each other through abstract interfaces instead of concrete types. The second would be to combine them and make extensions that add conformance to the delegate protocols that we are using. I have opted for the latter since I don't foresee these individual types being reused elsewhere in the app. The result of this decision will allow us to have a cleaner implementation in our `ContentView`.
 
