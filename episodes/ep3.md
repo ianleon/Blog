@@ -16,7 +16,7 @@ Delete `LegacyViewfinder` and `Viewfinder`. These were the implementation for th
 
 Delete `ContentView_Previews` since this type of app doesn't work with previews at the current time.
 
-## Object Oriented Design
+## Protocol Oriented Design
 
 As it is, the code that makes the viewfinder work is spread across several types. In hindsight, this doesn't do much for us. For example, the `FramesDelegate` type is tightly coupled with `LegacyMetalViewfinder`. 
 
