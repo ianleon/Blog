@@ -214,7 +214,7 @@ return MetalViewfinder(legacyViewfinder: metalViewfinder)
 
 The above change is the **main reason for this episode**. It adds clarity. Why would we get a reference to our viewfinder from a delegate? Now we don't have to.
 
-## SwiftUI and generics
+## SwiftUI and Generics
 
 The above is shaping up to be a cleaner design.
 
