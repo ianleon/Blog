@@ -150,7 +150,7 @@ struct MetalViewfinder: UIViewRepresentable {
 }
 ```
 
-### Update ContentView
+## Update ContentView
 
 Here we will see how the changes we have made affect how our viewfinder is used.
 
