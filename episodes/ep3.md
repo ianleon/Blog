@@ -1,6 +1,8 @@
 # Generics, Protocol Oriented Programming, and SwiftUI - Episode 3
 
-We will be continuing our SwiftUI camera app by refactoring and making better use of Swift's features.
+We will be continuing our SwiftUI camera app by refactoring and making better use of Swift's features. 
+
+Read this article to learn how Protocol Oriented Programming decisions have an effect on the clarity of an app's source code.
 
 I will be using Xcode 12 beta 4 on Big Sur Beta 4.
 
