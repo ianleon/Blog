@@ -17,9 +17,9 @@ Use the project from the last episode as a starting point to code-along.
 
 ## Setup `CIFilter` outside Viewfinder
 
-Currently we have one filter being instantiated, configured, and used directly inside of the the viewfinder's  `captureOutput(_:didOutput:from:)` delegate method. We will change so that viewfinder can have a filter set on it and it will deal with setting an input image and getting an output image.
+Currently we have one filter being instantiated, configured, and used directly inside of the the viewfinder's  `captureOutput(_:didOutput:from:)` delegate method. The viewfinder should have a filter property that can be changed externally. The `captureOutput(_:didOutput:from:)` should be able to use the arbitrary filter in this property to set an input image, get back an output image, and render it to the screen.
 
-First we add a filter property to the viewfinder.
+First we add an optional filter property to the viewfinder.
 
 ```swift
 class Viewfinder: MTKView {
