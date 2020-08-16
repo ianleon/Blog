@@ -53,7 +53,7 @@ filter?.setValue(
 
 Notice that we have to set the input image property through key-value coding. This is because `CIFilter` does not have an `inputImage` property. Instead, the specific filters that we get through `CIFilter.filterName()` have their own `inputImage` properties.
 
-In `ContentView` we can use the filter property.
+In `ContentView` we can now use the viewfinder's filter property.
 
 Add the following right before the return statement in the `body` property
 
