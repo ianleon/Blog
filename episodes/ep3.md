@@ -260,4 +260,4 @@ The change above is a testament to a cleaner and more expressive design.
 
 [Download Project](https://github.com/ianleon/BlogCam/tree/Ep3)
 
-
+Continue: [Compose Filter Pipelines with Swift](https://github.com/ianleon/Blog/blob/master/episodes/ep4.md)
