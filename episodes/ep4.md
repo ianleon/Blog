@@ -32,13 +32,14 @@ class Viewfinder: MTKView {
 ```
 
 
-The we update the `captureOutput(_:didOutput:from:)` implementation to use this filter
+The we update the `captureOutput(_:didOutput:from:)` implementation to use this filter property instead of the locally created filter.
 
 ```swift
+// ... 
+
 // Before
 let filter = CIFilter.pixellate()
 filter.scale = 12
-pixellate filter
 filter.inputImage = sampleImage.clampedToExtent()
 
 // After
@@ -47,6 +48,7 @@ filter?.setValue(
     forKey: kCIInputImageKey
 )
 
+// ...
 ```
 
 Notice that we have to set the input image property through key-value coding. This is because `CIFilter` does not have an `inputImage` property. Instead, the specific filters that we get through `CIFilter.filterName()` have their own `inputImage` properties.
