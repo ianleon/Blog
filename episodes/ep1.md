@@ -1,9 +1,15 @@
 # Making a camera app in SwiftUI - Episode 1
 
+<!-- statement of empowerment -->
+Read this article to learn how you can start building a camera app in Swift and SwiftUI.
+
+<!-- status update -->
 We will be starting by making an empty SwiftUI app and adding a viewfinder.
 
+<!-- tool and environment version -->
 I will be using Xcode 12 beta 3 on Big Sur Beta 3
 
+<!-- call to action -->
 Start a new project in Xcode, choose iOS app, and configure it like this: 
 
 -  Interface: SwiftUI
