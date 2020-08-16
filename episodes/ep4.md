@@ -67,7 +67,7 @@ viewfinder.filter = zoom
 // ...
 ```
 
-We have created a different filter from the one that we had before and set it on the viewfinder. This is a better design because now we can reuse that same filter, with the same configuration, to process captured images and save them to the photos library.
+We have created a different filter and set it on the viewfinder. This is a better design because now we can reuse that same filter, with the same configuration, to process captured images and save them to the photos library.
 
 As a fun exercise, we can try various filters. Here is a set of filter configurations that we can try passing to the viewfinder. Try changing the values and see what they do.
 
