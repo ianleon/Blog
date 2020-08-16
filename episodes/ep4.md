@@ -31,7 +31,6 @@ class Viewfinder: MTKView {
 }
 ```
 
-
 The we update the `captureOutput(_:didOutput:from:)` implementation to use this filter property instead of the locally created filter.
 
 ```swift
@@ -67,7 +66,7 @@ viewfinder.filter = zoom
 // ...
 ```
 
-We have created a different filter and set it on the viewfinder. This is a better design because now we can reuse that same filter, with the same configuration, to process captured images and save them to the photos library.
+This is a better design because we can reuse that same filter, with the same configuration, to process captured images and save them to the photos library.
 
 As a fun exercise, we can try various filters. Here is a set of filter configurations that we can try passing to the viewfinder. Try changing the values and see what they do.
 
@@ -107,26 +106,19 @@ zoom.center = .init(x: 500, y: 500)
 
 ## Creating a `CIFilter` Pipeline
 
-Using a single filter is fun. However, `CoreImage` is an optimized system. We can push it further. 
+Using a single filter is fun. However, `CoreImage` is an optimized system. We can push it further. `CoreImage` was built to chain filters together.
 
-You may want to checkout the documentation for `CoreImage`: 
-
-- [`CoreImage`](https://developer.apple.com/documentation/coreimage)
-- [`CoreImage` - `CIImage`](https://developer.apple.com/documentation/coreimage/ciimage)
-
-`CoreImage` was built to chain filters together.
-
-However, this requires getting the `outputImage` from a filter and setting it as the `inputImage` for the following filter in the chain.
-
-We want to avoid that verbose manual chaining. 
-
-We do not want to change the viewfinder code. Instead we want to write the following code in our `ContentView`.
+However, we want to avoid verbose manual chaining. Instead we want to write the following code in our `ContentView`.
 
 ```swift
+// Before (only one filter)
+viewfinder.filter = zoom
+
+// After (multiple filters applied in a specific order)
 viewfinder.filter = .pipeline([pixellate, zoom])
 ```
 
-With Swift's extensible and Protocol Oriented Programming features, that code can work. What's even more amazing is that we wont change a single character in the current viewfinder implementation 🤯.
+With Swift's extensible and Protocol Oriented Programming features, that code can work. What's even more amazing is that we wont change a single character in the viewfinder implementation 🤯.
 
 We will create a new `FilterPipeline` type. 
 
@@ -166,18 +158,20 @@ class FilterPipeline: CIFilter {
 }
 
 extension CIFilter {
+
+    // Pipeline factory, similar to builtin filters
     static func pipeline(_ filters: [CIFilter]) -> FilterPipeline {
         return FilterPipeline(filters)
     }
 }
 ```
 
-It is a subclass of `CIFilter`. This is what allows us to substitute it for the standard single filters. We have added an `inputImage` property with an `@objc` attribute to make it key value coding compliant like the standard filters. We implement the `init` methods. For the `outputImage` property we want to apply all the filters in `filterChain` to our `inputImage`. The extension on `CIFilter` allows us to have a similar instantiation syntax as the built in filters.
+Subclassing `CIFilter` makes this type substitutable for the standard filters. The `@objc` attribute makes the `inputImage` property key value coding compliant like the standard filters. The `outputImage` applies all the filters in `filterChain` to our `inputImage`.
 
-Now we are able to chain multiple filters together in a clear way. Since these pipelines are substitutable for filters you can nest pipelines within pipelines.
+Since the pipeline itself is a `CIFilter`, it can be nested.
 
 ```swift
-viewfinder.filter = .pipeline([pixellate, .pipeline([zoom,hue])])
+viewfinder.filter = .pipeline([pixellate, .pipeline([zoom, hue])])
 ```
 
 Being able to write code like the above will allow us to try out more filter combinations in less time.
