@@ -1,10 +1,10 @@
 # Adding filters to a SwiftUI camera app - Episode 2
 
+<!-- statement of empowerment -->
+Read this article to learn how you can implement the latest in Metal filters in a Swift and SwiftUI camera app.
+
 <!-- status update -->
 We will be continuing our SwiftUI camera app by implementing filters on the viewfinder.
-
-<!-- statement of empowerment -->
-Read this article to learn how to implement the latest in realtime metal-based filters in a SwiftUI camera app.
 
 <!-- tool and environment version -->
 I will be using Xcode 12 beta 4 on Big Sur Beta 4.
