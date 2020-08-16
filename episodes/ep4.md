@@ -71,7 +71,7 @@ We have created a different filter and set it on the viewfinder. This is a bette
 
 As a fun exercise, we can try various filters. Here is a set of filter configurations that we can try passing to the viewfinder. Try changing the values and see what they do.
 
-```
+```swift
 let pixellate = CIFilter.pixellate()
 pixellate.scale = 12
 
