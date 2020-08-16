@@ -1,4 +1,4 @@
-# Compose Filter Pipelines with Swift Generics  - Episode 4
+# Compose Filter Pipelines with Swift - Episode 4
 
 We will be continuing our SwiftUI camera app by implementing a pipeline fo `CIFilters`
 
