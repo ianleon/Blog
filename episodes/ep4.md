@@ -5,10 +5,14 @@ Read this article to learn how you can use Swift's extensible and Protocol Orien
 
 <!-- status update -->
 We will be improving upon our SwiftUI camera app by implementing a `CIFilter` pipeline for our viewfinder.
+
+<!-- tool and environment version -->
 I will be using Xcode 12 beta 4 on Big Sur Beta 4.
 
+<!-- call to action -->
 Use the project from the last episode as a starting point to code-along.
 
+<!-- material download -->
 [EP 3 Project](https://github.com/ianleon/BlogCam/tree/Ep3)
 
 ## Setup `CIFilter` outside Viewfinder
