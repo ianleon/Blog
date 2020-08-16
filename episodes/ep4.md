@@ -1,7 +1,7 @@
 # Compose Filter Pipelines with Swift - Episode 4
 
 <!-- statement of empowerment -->
-Read this article to learn how you can use Swift's extensible and Protocol Oriented Programming features to implement a CoreImage `CIFilter` pipeline.
+Read this article to learn how you can use Swift's extensible and Protocol Oriented Programming features to implement a `Core Image` `CIFilter` pipeline.
 
 <!-- status update -->
 We will be improving upon our SwiftUI camera app by implementing a `CIFilter` pipeline for our viewfinder.
@@ -106,7 +106,7 @@ zoom.center = .init(x: 500, y: 500)
 
 ## Creating a `CIFilter` Pipeline
 
-Using a single filter is fun. However, `CoreImage` is an optimized system. We can push it further. `CoreImage` was built to chain filters together.
+Using a single filter is fun. However, `Core Image` is an optimized system. We can push it further. `Core Image` was built to chain filters together.
 
 However, we want to avoid verbose manual chaining. Instead we want to write the following code in our `ContentView`.
 
