@@ -78,7 +78,7 @@ struct ContentView: View {
 
 This is currently the one view in our app. This is where we will add our viewfinder.
 
-SwiftUI previews will not work we may hide the canvas to get extra space. Hit `CMD + Enter` or go to `Editor > Show Editor Only`. 
+Since SwiftUI previews will not work we may hide the canvas to get extra space. Hit `CMD + Enter` or go to `Editor > Show Editor Only`. 
 
 ## Session
 
