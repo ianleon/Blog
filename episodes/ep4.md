@@ -1,7 +1,10 @@
 # Compose Filter Pipelines with Swift - Episode 4
 
-We will be continuing our SwiftUI camera app by implementing a pipeline fo `CIFilters`
+<!-- statement of empowerment -->
+Read this article to learn how you can use Swift's extensible and Protocol Oriented Programming features to implement a CoreImage `CIFilter` pipeline.
 
+<!-- status update -->
+We will be improving upon our SwiftUI camera app by implementing a `CIFilter` pipeline for our viewfinder.
 I will be using Xcode 12 beta 4 on Big Sur Beta 4.
 
 Use the project from the last episode as a starting point to code-along.
