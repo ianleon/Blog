@@ -1,4 +1,4 @@
-# Compose Filter Pipelines with Swift - Episode 4
+# Compose Image Filter Pipelines with Swift - Episode 4
 
 <!-- statement of empowerment -->
 Read this article to learn how you can use Swift's extensible and Protocol Oriented Programming features to implement a `Core Image` `CIFilter` pipeline.
