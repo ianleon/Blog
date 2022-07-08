@@ -160,7 +160,7 @@ With SwiftUI you can implement that interface:
 	
 	- The `_` before `systemImageName` allows you to drop that argument name at the call-site. 
 	
-	- Keeping the action argument last enables the trailing closure syntax. (Like SwiftUI's standard button)
+	- Keeping the action argument last enables the trailing closure syntax. (Like SwiftUI's standard `Button`)
 	
 3. Create body
 
