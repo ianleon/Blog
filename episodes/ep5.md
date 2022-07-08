@@ -184,9 +184,13 @@ With SwiftUI you can implement that interface:
 	}
 	```
 	
-Now update `ContentView`’s `body`:
+Now update `ContentView`:
 
 ```swift
+func takePicture() {
+    print("Click!")
+}
+
 var body: some View {
     configureSession()
 
