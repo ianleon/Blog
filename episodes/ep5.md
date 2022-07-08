@@ -186,7 +186,7 @@ With SwiftUI you can implement that interface:
 	
 Now update `ContentView`’s `body`:
 	
-```
+```swift
 var body: some View {
 
 	configureSession()
