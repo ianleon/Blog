@@ -99,7 +99,7 @@ You might like a reusable way to make icon based buttons while preserving the ac
 
 ```swift
 Icon(label: "Shutter", "circle.fill") {
-    takePicture()
+  takePicture()
 }
 ```
 
@@ -128,9 +128,9 @@ With SwiftUI you can implement that interface:
 	```swift
 	import SwiftUI
 	struct Icon: View {
-		let systemImageName: String
-		let accessibilityLabel: String
-		let action: () -> Void
+	    let systemImageName: String
+	    let accessibilityLabel: String
+	    let action: () -> Void
 	}
 	```
 
@@ -144,13 +144,13 @@ With SwiftUI you can implement that interface:
 	
 	```swift
 	init(
-		label accessibilityLabel: String,
-		_ systemImageName: String = "a",
-		action: @escaping () -> Void = { }
+	    label accessibilityLabel: String,
+	    _ systemImageName: String = "a",
+	    action: @escaping () -> Void = { }
 	) {
-		self.systemImageName = systemImageName
-		self.accessibilityLabel = accessibilityLabel
-		self.action = action
+	    self.systemImageName = systemImageName
+	    self.accessibilityLabel = accessibilityLabel
+	    self.action = action
 	}
 	```
 	
@@ -174,37 +174,33 @@ With SwiftUI you can implement that interface:
 	
 	```swift
 	fileprivate func icon() -> some View {
-	  Image(systemName: systemImageName)
-	    .font(.system(size: 36))
+	    Image(systemName: systemImageName)
+	      .font(.system(size: 36))
 	}
     
 	var body: some View {
-	  Button(action: action, label: icon)
-	    .accessibilityLabel(accessibilityLabel)
+	    Button(action: action, label: icon)
+	        .accessibilityLabel(accessibilityLabel)
 	}
 	```
 	
 Now update `ContentView`’s `body`:
-	
+
 ```swift
 var body: some View {
+    configureSession()
 
-	configureSession()
+    viewfinder.filter = makeFilter()
 
-	viewfinder.filter = makeFilter()
-
-	return VStack {
-		Rep(view: viewfinder)
-		Icon(label: "Shutter", "circle.fill") {
-			takePicture()
-		}
-	}
+    return VStack {
+        Rep(view: viewfinder)
+        Icon(label: "Shutter", "circle.fill") {
+            takePicture()
+        }
+    }
 }
 ```
 
 [Download Project](https://github.com/ianleon/BlogCam/tree/Ep5)
 
-
 Continue: [Capturing & Saving an Image](ep6.md)
-
-
