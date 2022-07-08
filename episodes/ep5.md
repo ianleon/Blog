@@ -207,4 +207,4 @@ var body: some View {
 
 [Download Project](https://github.com/ianleon/BlogCam/tree/Ep5)
 
-Continue: [Capturing & Saving an Image](ep6.md)
+[//]: # (Continue: [Capturing & Saving an Image]&#40;ep6.md&#41;)
