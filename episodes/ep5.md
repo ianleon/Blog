@@ -184,5 +184,27 @@ With SwiftUI you can implement that interface:
 	}
 	```
 	
-	[Download Project](https://github.com/ianleon/BlogCam/tree/Ep5)
+Now update `ContentView`’s `body`:
+	
+```
+var body: some View {
+
+	configureSession()
+
+	viewfinder.filter = makeFilter()
+
+	return VStack {
+		Rep(view: viewfinder)
+		Icon(label: "Shutter", "circle.fill") {
+			takePicture()
+		}
+	}
+}
+```
+
+[Download Project](https://github.com/ianleon/BlogCam/tree/Ep5)
+
+
+Continue: [Capturing & Saving an Image](ep6.md)
+
 
