@@ -65,7 +65,7 @@ Button {
 
 You can use modifiers to increase the size of the icon.
 
-```
+```swift
 Button {
     takePicture()
 } label: {
@@ -81,7 +81,7 @@ However, as is, this button is not accessible to everyone.
 
 You can fix that using an accessibility modifier.
 
-```
+```swift
 Button {
     takePicture()
 } label: {
