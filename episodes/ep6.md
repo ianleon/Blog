@@ -24,7 +24,7 @@ To ask the user for permission to save to their photo library we need to write a
 
 Add the following to the `Info.plist`.
 
-```plist
+```xml
 <key>NSPhotoLibraryUsageDescription</key>
 <string>Saving to your photo library</string>
 ```
