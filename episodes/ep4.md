@@ -179,5 +179,5 @@ Being able to write code like the above will allow us to try out more filter com
 [Download Project](https://github.com/ianleon/BlogCam/tree/Ep4)
 
 
-Continue: [Create a Shutter Button](https://github.com/ianleon/Blog/blob/master/episodes/ep5.md)
+Continue: [Create a Shutter Button](ep5.md)
 
